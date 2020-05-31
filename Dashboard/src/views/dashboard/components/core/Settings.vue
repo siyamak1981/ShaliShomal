@@ -2,7 +2,7 @@
   <div id="settings-wrapper">
     <v-card
       id="settings"
-      class="py-2 px-4"
+      class="py-1 px-1"
       color="rgba(0, 0, 0, .3)"
       dark
       flat
@@ -11,7 +11,7 @@
       style="position: fixed; top: 115px; right: -35px; border-radius: 8px;"
     >
       <v-icon large>
-        mdi-settings
+        mdi-apple
       </v-icon>
     </v-card>
 

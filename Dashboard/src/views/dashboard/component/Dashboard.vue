@@ -597,5 +597,6 @@
         this.list[index] = !this.list[index]
       },
     },
+   
   }
 </script>

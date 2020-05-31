@@ -45,6 +45,7 @@
           elevation="1"
           fab
           small
+   
         >
           <v-icon>mdi-magnify</v-icon>
         </v-btn>
@@ -161,6 +162,7 @@
     },
 
     data: () => ({
+      search:'',
       notifications: [
         'Mike John Responded to your email',
         'You have 5 new tasks',
@@ -175,6 +177,7 @@
     },
 
     methods: {
+    
       ...mapMutations({
         setDrawer: 'SET_DRAWER',
       }),

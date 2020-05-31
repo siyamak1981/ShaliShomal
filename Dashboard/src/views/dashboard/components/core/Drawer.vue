@@ -75,9 +75,8 @@
       <!-- https://github.com/vuetifyjs/vuetify/pull/8574 -->
       <div />
     </v-list>
-
     <template v-slot:append>
-       <v-btn class="mx-4 my-8" :href="url" color="primary" dark>
+       <v-btn class="mx-4 my-8" :to="{name:'Logout'}" color="primary" dark>
         <v-icon dark left>mdi-logout</v-icon>Back
       </v-btn>
     </template>
@@ -99,24 +98,40 @@
         default: false,
       },
     },
-
+  
     data: () => ({
-      url:'http://localhost:8081',
+      // url:'http://localhost:8080/logout',
       items: [
         {
           icon: 'mdi-view-dashboard',
           title: 'dashboard',
-          to: '/',
+          to: '/', 
+        },
+
+        {
+          icon: 'mdi-account',
+          title: 'profile',
+          to: '/pages/profile',
+        },
+        {
+          icon: 'mdi-apple-safari',
+          title: 'tabs',
+          to: '/components/tabs',
+        },
+        {
+          icon: 'mdi-anchor',
+          title: 'grid',
+          to: '/components/grid',
         },
         {
           icon: 'mdi-account',
-          title: 'user',
-          to: '/pages/user',
+          title: 'timeline',
+          to: '/pages/timeline',
         },
         {
-          title: 'rtables',
+          title: 'user',
           icon: 'mdi-clipboard-outline',
-          to: '/tables/regular-tables',
+          to: '/tables/user',
         },
         {
           title: 'typography',
@@ -138,9 +153,9 @@
           icon: 'mdi-bell',
           to: '/components/notifications',
         },
+        
       ],
     }),
-
     computed: {
       ...mapState(['barColor', 'barImage']),
       drawer: {

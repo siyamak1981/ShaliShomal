@@ -119,7 +119,19 @@
 
 <script>
   export default {
-    name: 'DashboardDashboard',
+    name: 'DashboardLogout',
+    data(){
+      return {
+
+      }
+    },
+      created(){
+        this.$store.dispatch("destroyToken")
+        .then(response=>{
+            // this.$router.push({name:"home"})
+            return response
+        })
+    }
   }
 </script>
 
